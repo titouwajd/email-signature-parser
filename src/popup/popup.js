@@ -1,5 +1,5 @@
-// ⚠️ Remplace cette URL par ton lien de paiement Stripe
-const STRIPE_PAYMENT_LINK = 'https://buy.stripe.com/your-checkout-link';
+// 🔗 Lien de paiement Stripe
+const STRIPE_PAYMENT_LINK = 'https://buy.stripe.com/5kQ7sE6zjd5bfoQ7CC7ok00';
 
 const contactList = document.getElementById('contact-list');
 const emptyState = document.getElementById('empty-state');
