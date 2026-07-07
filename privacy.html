@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Politique de confidentialité — Email Signature Parser</title>
+  <style>
+    body { max-width: 720px; margin: 60px auto; padding: 0 20px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 16px; line-height: 1.7; color: #1F2937; background: #F9FAFB; }
+    h1 { font-size: 26px; margin-bottom: 8px; }
+    h2 { font-size: 18px; margin-top: 32px; color: #4F46E5; }
+    p, li { color: #4B5563; }
+    ul { padding-left: 20px; }
+    a { color: #4F46E5; }
+    .date { color: #9CA3AF; font-size: 14px; margin-bottom: 32px; }
+  </style>
+</head>
+<body>
+  <h1>Politique de confidentialité</h1>
+  <p class="date">Dernière mise à jour : 6 juillet 2026</p>
+
+  <h2>1. Données collectées</h2>
+  <p><strong>Email Signature Parser ne collecte, ne transmet et ne stocke aucune donnée personnelle sur des serveurs externes.</strong></p>
+  <p>Les contacts extraits depuis les signatures d'email (nom, email, téléphone, poste, entreprise, site web) sont stockés <strong>exclusivement en local</strong> dans votre navigateur via l'API <code>chrome.storage.local</code>. Aucune donnée n'est envoyée à un serveur tiers.</p>
+
+  <h2>2. Utilisation des données</h2>
+  <p>Les données extraites servent uniquement à :</p>
+  <ul>
+    <li>Afficher la liste des contacts dans le popup de l'extension</li>
+    <li>Permettre l'export au format CSV sur votre machine</li>
+  </ul>
+  <p>Vous pouvez supprimer tous les contacts à tout moment depuis le popup de l'extension.</p>
+
+  <h2>3. Permissions demandées</h2>
+  <ul>
+    <li><strong>storage</strong> — Stocker vos contacts extraits localement</li>
+    <li><strong>activeTab</strong> — Détecter quand un email est ouvert pour proposer l'extraction</li>
+    <li><strong>Host permissions (Gmail, Outlook)</strong> — Injecter le bouton d'extraction sur les webmails</li>
+  </ul>
+
+  <h2>4. Paiements</h2>
+  <p>Les paiements pour la version Premium sont traités par <strong>Stripe</strong>, un prestataire de paiement tiers. Aucune donnée bancaire n'est accessible par l'extension. Voir la <a href="https://stripe.com/fr/privacy" target="_blank">politique de confidentialité de Stripe</a>.</p>
+
+  <h2>5. Cookies et tracking</h2>
+  <p>Cette extension n'utilise <strong>aucun cookie</strong> et ne contient <strong>aucun script de tracking</strong> ou d'analyse.</p>
+
+  <h2>6. Contact</h2>
+  <p>Pour toute question : contactez-moi via l'email associé au compte développeur Chrome Web Store.</p>
+</body>
+</html>

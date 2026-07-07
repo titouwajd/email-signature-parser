@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "Email Signature Parser",
+  "version": "1.0.0",
+  "description": "Extrait automatiquement les contacts depuis les signatures d'email dans Gmail et Outlook.",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://mail.google.com/*",
+    "https://outlook.live.com/*",
+    "https://outlook.office.com/*",
+    "https://outlook.office365.com/*"
+  ],
+  "background": {
+    "service_worker": "src/background/background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://mail.google.com/*",
+        "https://outlook.live.com/*",
+        "https://outlook.office.com/*",
+        "https://outlook.office365.com/*"
+      ],
+      "js": ["src/content/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_title": "Email Signature Parser"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

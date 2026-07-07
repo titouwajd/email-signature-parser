@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Signature Parser</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <h1>📋 Signature Parser</h1>
+    <span id="quota-badge" class="badge"></span>
+  </header>
+
+  <main>
+    <div id="empty-state" class="state-msg" style="display:none">
+      <p>📭 Aucun contact extrait.</p>
+      <small>Ouvrez un email dans Gmail ou Outlook et cliquez sur "Extraire le contact".</small>
+    </div>
+
+    <ul id="contact-list"></ul>
+  </main>
+
+  <footer>
+    <button id="export-csv" class="btn btn-secondary">📥 Export CSV</button>
+    <button id="clear-all" class="btn btn-danger">🗑 Tout effacer</button>
+    <div id="premium-cta" style="display:none">
+      <p>🔒 Limite : 10 extractions/mois</p>
+      <button id="upgrade-btn" class="btn btn-primary">✨ Passer Premium — 5€/mois</button>
+    </div>
+  </footer>
+
+  <script src="popup.js" type="module"></script>
+</body>
+</html>

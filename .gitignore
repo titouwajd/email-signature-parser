@@ -1,0 +1,5 @@
+node_modules/
+.DS_Store
+*.log
+scripts/generate-icons.py
+scripts/generate-assets.py

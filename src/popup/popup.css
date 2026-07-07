@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 380px;
+  min-height: 300px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13px;
+  background: #F9FAFB;
+  color: #1F2937;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: #4F46E5;
+  color: white;
+}
+
+header h1 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.badge {
+  background: rgba(255,255,255,0.2);
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+main {
+  padding: 8px 0;
+  max-height: 360px;
+  overflow-y: auto;
+}
+
+.state-msg {
+  text-align: center;
+  padding: 40px 20px;
+  color: #9CA3AF;
+}
+
+.state-msg p {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.state-msg small {
+  color: #D1D5DB;
+  line-height: 1.5;
+}
+
+/* --- Contact card --- */
+.contact-card {
+  margin: 4px 8px;
+  padding: 10px 12px;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #E5E7EB;
+  cursor: default;
+  transition: box-shadow 0.15s;
+}
+
+.contact-card:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.contact-card .name {
+  font-weight: 600;
+  font-size: 14px;
+  color: #111827;
+  margin-bottom: 2px;
+}
+
+.contact-card .detail {
+  color: #6B7280;
+  font-size: 12px;
+  margin: 1px 0;
+}
+
+.contact-card .detail a {
+  color: #4F46E5;
+  text-decoration: none;
+}
+
+.contact-card .detail a:hover {
+  text-decoration: underline;
+}
+
+.contact-card .company {
+  display: inline-block;
+  background: #EEF2FF;
+  color: #4F46E5;
+  padding: 1px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.contact-card .delete-btn {
+  float: right;
+  background: none;
+  border: none;
+  color: #D1D5DB;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0 4px;
+  line-height: 1;
+  transition: color 0.15s;
+}
+
+.contact-card .delete-btn:hover {
+  color: #EF4444;
+}
+
+/* --- Footer --- */
+footer {
+  padding: 10px 16px;
+  border-top: 1px solid #E5E7EB;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.btn {
+  padding: 7px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  transition: opacity 0.15s;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn-primary {
+  background: #4F46E5;
+  color: white;
+  width: 100%;
+}
+
+.btn-secondary {
+  background: #F3F4F6;
+  color: #374151;
+  flex: 1;
+}
+
+.btn-danger {
+  background: #FEE2E2;
+  color: #DC2626;
+  flex: 1;
+}
+
+#premium-cta {
+  width: 100%;
+  text-align: center;
+  margin-top: 6px;
+  padding-top: 8px;
+  border-top: 1px dashed #E5E7EB;
+}
+
+#premium-cta p {
+  font-size: 11px;
+  color: #9CA3AF;
+  margin-bottom: 4px;
+}
