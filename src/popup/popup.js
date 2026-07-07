@@ -8,6 +8,9 @@ const exportCsvBtn = document.getElementById('export-csv');
 const clearAllBtn = document.getElementById('clear-all');
 const premiumCta = document.getElementById('premium-cta');
 const upgradeBtn = document.getElementById('upgrade-btn');
+const licenseInput = document.getElementById('license-input');
+const activateKeyBtn = document.getElementById('activate-key-btn');
+const licenseMsg = document.getElementById('license-msg');
 
 document.addEventListener('DOMContentLoaded', init);
 
@@ -33,6 +36,36 @@ clearAllBtn.addEventListener('click', clearAll);
 upgradeBtn.addEventListener('click', () => {
   window.open(STRIPE_PAYMENT_LINK, '_blank');
 });
+
+// 🔑 Activation par clé manuelle
+activateKeyBtn.addEventListener('click', activateLicenseKey);
+licenseInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') activateLicenseKey();
+});
+
+async function activateLicenseKey() {
+  const key = licenseInput.value.trim().toUpperCase();
+  if (!key) {
+    licenseMsg.textContent = 'Veuillez entrer une clé.';
+    licenseMsg.style.color = '#DC2626';
+    return;
+  }
+
+  // Vérifie le format: ESP-YYYYMMDD-NOM (ex: ESP-20260707-SOPHIE)
+  const pattern = /^ESP-\d{8}-[A-Z]+$/;
+  if (!pattern.test(key)) {
+    licenseMsg.textContent = '❌ Format invalide. Exemple : ESP-20260707-SOPHIE';
+    licenseMsg.style.color = '#DC2626';
+    return;
+  }
+
+  // Active le premium
+  await chrome.storage.local.set({ esp_premium: true });
+  licenseMsg.textContent = '✅ Premium activé avec succès !';
+  licenseMsg.style.color = '#059669';
+  licenseInput.value = '';
+  setTimeout(() => location.reload(), 1500);
+}
 
 async function loadContacts() {
   const response = await chrome.runtime.sendMessage({ type: 'GET_CONTACTS' });
